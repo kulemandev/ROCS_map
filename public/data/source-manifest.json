@@ -1,0 +1,39 @@
+{
+  "anfrCandidateSites": {
+    "file": "anfr-sncf-reseau-supports.geojson",
+    "sourceDataset": "Données sur les installations radioélectriques de plus de 5 watts",
+    "sourcePage": "https://www.data.gouv.fr/datasets/donnees-sur-les-installations-radioelectriques-de-plus-de-5-watts-1/",
+    "sourceArtifact": "anfr-data.zip",
+    "referenceArtifact": "anfr-ref.zip",
+    "notes": "Filtered to supports linked to stations operated by SNCF Réseau or SNCF in the official ANFR export.",
+    "metadata": {
+      "featureCount": 4356,
+      "operatorFilter": ["202", "206"],
+      "operatorNames": ["SNCF Réseau", "SNCF"]
+    }
+  },
+  "derivedTunnels": {
+    "file": "nicolas-wurtz-tunnels.geojson",
+    "sourcePage": "https://github.com/nicolaswurtz/extras-opendata-sncf-reseau",
+    "sourceArtifact": "nw-tunnels.zip",
+    "notes": "Optional derived tunnel layer published by Nicolas Wurtz from public railway data sources.",
+    "metadata": {
+      "featureCount": 1469,
+      "archiveEntry": "lignes-tunnels.geojson"
+    }
+  },
+  "futureErtmsScenario": {
+    "file": "dgitm-future-ertms-2044.geojson",
+    "planningSource": "DGITM Note de synthèse sur le plan de déploiement ERTMS, November 2024",
+    "planningSourceUrl": "https://www.ecologie.gouv.fr/sites/default/files/documents/202411%20Consultation%20DGITM%20-%20ERTMS.pdf",
+    "geometrySource": "SNCF RFN open-data line geometry",
+    "geometrySourceUrl": "https://ressources.data.sncf.com/explore/dataset/formes-des-lignes-du-rfn/",
+    "notes": "Cartographic scenario transcribed from the document map onto RFN geometry. It is not an official machine-readable deployment dataset.",
+    "metadata": {
+      "featureCount": 77,
+      "estimatedLengthKm": 3666.1,
+      "horizon": 2044,
+      "generatedBy": "scripts/build_future_ertms_scenario.py"
+    }
+  }
+}
